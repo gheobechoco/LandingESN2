@@ -38,3 +38,9 @@ togglePassword.addEventListener('click', () => {
   passwordInput.type = isPassword ? 'text' : 'password';
   togglePassword.innerHTML = isPassword ? '<i class="fas fa-eye-slash"></i>' : '<i class="fas fa-eye"></i>';
 });
+
+
+document.getElementById('close-auth').addEventListener('click', () => {
+  document.getElementById('auth-modal').classList.add('hidden');
+});
+    
