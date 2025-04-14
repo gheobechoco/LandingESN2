@@ -375,3 +375,13 @@
     text-decoration: underline;
   }
   
+  /* delete data */
+  .delete-data {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
