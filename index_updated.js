@@ -72,4 +72,32 @@ document.addEventListener('DOMContentLoaded', () => {
     userInfo.classList.add('hidden');
     authButtons.classList.remove('hidden');
   }
+
+  // Form submission handling
+  document.getElementById('auth-form').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    try {
+      const res = await fetch('http://localhost:3500/utilisateurs', {
+        method: 'POST',
+        body: formData
+      });
+
+      if (!res.ok) {
+        const errText = await res.text();
+        throw new Error(`Erreur ${res.status} : ${errText}`);
+      }
+
+      const data = await res.json();
+      console.log('Utilisateur inscrit :', data);
+      alert("✅ Inscription réussie !");
+      form.reset();
+    } catch (err) {
+      console.error('Erreur lors de l\'inscription :', err);
+      alert("❌ Erreur lors de l'inscription : " + err.message);
+    }
+  });
 });

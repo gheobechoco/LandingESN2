@@ -1,20 +1,20 @@
-/* Reset */
-* {
+  /* Reset */
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-  
+
   body {
     font-family: 'Segoe UI', sans-serif;
     background-color: #f7f7f7;
     color: #333;
-    background-image: url('ton-image-de-fond.jpg');
+    background-image: url('ESN-BG.jpeg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
   }
-  
+
   /* Header */
   header {
     background-color: rgba(30, 61, 47, 0.8);
@@ -24,7 +24,7 @@
     padding: 1rem 2rem;
     flex-wrap: wrap;
   }
-  
+
   .header-left,
   .header-center,
   .header-right {
@@ -33,65 +33,65 @@
     align-items: center;
     justify-content: center;
   }
-  
+
   .header-left {
     justify-content: flex-start;
   }
-  
+
   .header-right {
     justify-content: flex-end;
   }
-  
+
   /* Logo */
   .logo img {
     height: 95px;
     border-radius: 50px;
   }
-  
+
   /* Icônes sociales */
   .social-icons {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 2rem;
   }
-  
+
   .social-icons a {
     color: white;
     font-size: 2.4rem;
     transition: all 0.3s ease;
   }
-  
+
   .social-icons a:hover {
     background-color: rgba(76, 175, 80, 0.6);
-    border-radius: 50%;
+    border-radius: 10%;
     padding: 0.4rem;
   }
-  
+
   /* Connexion / Inscription */
   .user-profile {
     display: flex;
     align-items: center;
     gap: 1rem;
   }
-  
+
   #user-info {
     display: flex;
     align-items: center;
     gap: 0.5rem;
   }
-  
+
   #user-avatar {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
   }
-  
+
   #user-name {
     color: white;
     font-weight: bold;
   }
-  
+
   #auth-buttons button,
   #logout-btn {
     background-color: #3d6b55;
@@ -101,7 +101,7 @@
     border-radius: 6px;
     cursor: pointer;
   }
-  
+
   /* Modal */
   #auth-modal {
     position: fixed;
@@ -109,13 +109,13 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 1000;
   }
-  
+
   /* Formulaire */
   #auth-form {
     background: #ffffff;
@@ -129,14 +129,14 @@
     gap: 1.5rem;
     animation: fadeIn 0.3s ease-in-out;
   }
-  
+
   #auth-form h2 {
     font-size: 1.8rem;
     color: #1e3d2f;
     text-align: center;
     margin-bottom: 0.5rem;
   }
-  
+
   #auth-form input {
     padding: 0.8rem;
     border: 1px solid #ccc;
@@ -144,12 +144,12 @@
     font-size: 1rem;
     transition: border 0.3s ease;
   }
-  
+
   #auth-form input:focus {
     border-color: #3d6b55;
     outline: none;
   }
-  
+
   #auth-form button {
     background-color: #1e3d2f;
     color: white;
@@ -160,31 +160,44 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
-  
+
   #auth-form button:hover {
     background-color: #3d6b55;
   }
-  
+
   /* Fermer bouton */
-  #auth-form .close-btn {
+  .close-modal-btn {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: transparent;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    background: none;
     border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #999;
-  }
-  
-  #auth-form .close-btn:hover {
     color: #333;
+    cursor: pointer;
+    z-index: 1001;
+    pointer-events: auto;
   }
-  
+
+  .close-modal-btn:hover {
+    color: #e00;
+  }
+
+  .modal-content {
+    position: relative;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 5% auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+
   .hidden {
     display: none;
   }
-  
+
   /* Hero */
   .hero {
     text-align: center;
@@ -192,18 +205,18 @@
     background: linear-gradient(to right, #3d6b55, #1e3d2f);
     color: white;
   }
-  
+
   .hero h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
   }
-  
+
   .hero p {
     font-size: 1.2rem;
     max-width: 600px;
     margin: 0 auto;
   }
-  
+
   /* Intro */
   .intro {
     text-align: center;
@@ -211,30 +224,30 @@
     max-width: 800px;
     margin: 0 auto;
   }
-  
+
   .intro h2 {
     font-size: 1.5rem;
     color: #60f2ffd8;
     margin-bottom: 1rem;
   }
-  
+
   .intro .contact {
     font-size: 1.1rem;
     color: #ededed;
   }
-  
+
   /* Services */
   .services {
     padding: 3rem 2rem;
     text-align: center;
   }
-  
+
   .services-title {
     font-size: 2rem;
     margin-bottom: 2rem;
     color: #1e3d2f;
   }
-  
+
   .dropdowns {
     display: flex;
     justify-content: space-between;
@@ -243,12 +256,12 @@
     margin: 0 auto;
     flex-wrap: wrap;
   }
-  
+
   .dropdown-container {
     flex: 1;
     min-width: 280px;
   }
-  
+
   .dropdown-toggle {
     width: 100%;
     padding: 1rem;
@@ -260,7 +273,7 @@
     border-radius: 8px;
     text-align: left;
   }
-  
+
   .dropdown-menu {
     list-style: none;
     background-color: white;
@@ -270,45 +283,45 @@
     padding: 0;
     margin: 0;
   }
-  
+
   .dropdown-menu.show {
     display: block;
   }
-  
+
   .dropdown-menu li {
     padding: 1rem;
     border-top: 1px solid #eee;
     cursor: pointer;
   }
-  
+
   .dropdown-menu li:hover {
     background-color: #f2f2f2;
   }
-  
+
   /* Responsive */
   @media (max-width: 768px) {
     .hero h1 {
       font-size: 2rem;
     }
-  
+
     .hero p {
       font-size: 1rem;
     }
-  
+
     .intro h2 {
       font-size: 1.2rem;
     }
-  
+
     .dropdowns {
       flex-direction: column;
       gap: 1.5rem;
     }
-  
+
     header {
       flex-direction: column;
       align-items: stretch;
     }
-  
+
     .header-left,
     .header-center,
     .header-right {
@@ -317,7 +330,6 @@
     }
   }
 
-  
   /* Animation */
   @keyframes fadeIn {
     from {
@@ -335,12 +347,12 @@
     display: flex;
     align-items: center;
   }
-  
+
   .password-container input {
     width: 100%;
     padding-right: 2.5rem;
   }
-  
+
   .password-toggle {
     position: absolute;
     right: 1rem;
@@ -348,12 +360,10 @@
     color: #666;
     font-size: 1.2rem;
   }
-  
+
   .password-toggle:hover {
     color: #1e3d2f;
   }
-  
-  
 
   /* Footer */
   .site-footer {
@@ -365,16 +375,16 @@
     margin-top: 40px;
     border-top: 1px solid #ccc;
   }
-  
+
   .site-footer a {
     color: #007bff;
     text-decoration: none;
   }
-  
+
   .site-footer a:hover {
     text-decoration: underline;
   }
-  
+
   /* delete data */
   .delete-data {
     background-color: #ff4d4d;
@@ -385,3 +395,91 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
+
+  .hidden {
+    display: none !important;
+  }
+
+
+  /* Style pour la page de suppression des données */
+.data-deletion {
+  text-align: center;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.data-deletion h1 {
+  font-size: 1.5rem;
+  color: #1e3d2f;
+  margin-bottom: 1.5rem;
+}
+
+.data-deletion p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.return-button {
+  background-color: #3d6b55;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 2rem;
+  transition: background-color 0.3s ease;
+}
+
+.return-button:hover {
+  background-color: #1e3d2f;
+}
+
+
+/* Style pour la page de confidentialité */
+.privacy-content {
+  text-align: center;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.privacy-content h1 {
+  font-size: 1.5rem;
+  color: #1e3d2f;
+  margin-bottom: 1.5rem;
+}
+
+.privacy-content p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.privacy-content ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.privacy-content li {
+  margin: 0.5rem 0;
+}
+
+.return-button {
+  background-color: #3d6b55;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 2rem;
+  transition: background-color 0.3s ease;
+}
+
+.return-button:hover {
+  background-color: #1e3d2f;
+}

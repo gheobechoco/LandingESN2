@@ -1,129 +1,129 @@
-  <!DOCTYPE html>
-  <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>ESN</title>
-    <link rel="stylesheet" href="index.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  </head>
-  <body>
-    <header>
-      <div class="header-left">
-        <div class="logo">
-          <img src="ESN-landing-logo.jpeg" alt="Logo ADEA & ASG" />
-        </div>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESN</title>
+  <link rel="stylesheet" href="index.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <div class="logo">
+        <img src="ESN-landing-logo.jpeg" alt="Logo ADEA & ASG" />
       </div>
-    
-      <div class="header-center">
-        <div class="social-icons">
-          <a href="https://www.facebook.com/share/1AEEoYxszk/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-          <a href="https://www.tiktok.com/@adeaasg?_t=ZM-8vMkjJtVi8E&_r=1" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-        </div>
-      </div>
-    
-      <div class="header-right user-profile">
-        <div id="user-info" class="hidden">
-          <img id="user-avatar" src="" alt="Photo de profil" />
-          <span id="user-name"></span>
-          <button id="logout-btn">Déconnexion</button>
-        </div>
-        <div id="auth-buttons">
-          <button id="login-btn">Connexion</button>
-          <button id="signup-btn">Inscription</button>
-        </div>
-      </div>
-    </header>
-    
-    <main>
-      <section class="hero">
-        <h1>Entreprise de Services</h1>
-        <p>Qualité, sécurité et savoir-faire dans les domaines du BTP et de l’espace vert.</p>
-      </section>
-
-      <section class="services">
-        <h1 class="services-title">Domaines :</h1>
-        <div class="dropdowns">
-          <div class="dropdown-container">
-            <button class="dropdown-toggle">Espace Vert</button>
-            <ul class="dropdown-menu">
-              <li>Débroussaillage</li>
-              <li>Défrichage</li>
-              <li>Désherbage</li>
-              <li>Abattage</li>
-              <li>Élagage</li>
-              <li>Dessouchage</li>
-              <li>Jardinage</li>
-            </ul>
-          </div>
-
-          <div class="dropdown-container">
-            <button class="dropdown-toggle">BTP</button>
-            <ul class="dropdown-menu">
-              <li>Architecture</li>
-              <li>Maçonnerie</li>
-              <li>Menuiserie</li>
-              <li>Carrelage</li>
-              <li>Charpente</li>
-              <li>Électricité</li>
-              <li>Plomberie</li>
-              <li>Peinture</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="intro">
-          <h2>Entretien et nettoyage des espaces verts. Des services de qualité pour un extérieur impeccable.</h2>
-          <p class="contact">Contact : 077-586-686 / 077-373-021</p>
-      </section>
-    </main>
-
-    <!-- Modal de connexion / inscription -->
-    <div id="auth-modal" class="hidden">
-      <form id="auth-form">
-        
-        <h2>Connexion / Inscription</h2>
-        <input type="text" id="username" placeholder="Nom d'utilisateur" required />
-        <div class="password-container">
-          <input type="password" id="password" placeholder="Mot de passe" required />
-          <span id="toggle-password" class="password-toggle">
-            <i class="fas fa-eye"></i>
-          </span>
-        </div>
-        
-        <input type="file" id="avatar" accept="image/*" required />
-        <button type="submit">Valider</button>
-      </form>
     </div>
-  
 
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
-    <script src="index.js"></script>
-    <script type="module">
-      // Import the functions you need from the SDKs you need
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
-      // TODO: Add SDKs for Firebase products that you want to use
-      // https://firebase.google.com/docs/web/setup#available-libraries
+    <div class="header-center">
+      <div class="social-icons">
+        <a
+          href="https://www.facebook.com/share/1AEEoYxszk/"
+          target="_blank"
+          aria-label="Facebook"
+          ><i class="fab fa-facebook"></i
+        ></a>
+        <a
+          href="https://www.tiktok.com/@adeaasg?_t=ZM-8vMkjJtVi8E&_r=1"
+          target="_blank"
+          aria-label="TikTok"
+          ><i class="fab fa-tiktok"></i
+        ></a>
+      </div>
+    </div>
+
+    <div class="header-right user-profile">
+      <div id="user-info" class="hidden">
+        <img id="user-avatar" src="" alt="Photo de profil" />
+        <span id="user-name"></span>
+        <button id="logout-btn">Déconnexion</button>
+      </div>
+      <div id="auth-buttons">
+        <button id="login-btn">Connexion</button>
+        <button id="signup-btn">Inscription</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Entreprise de Services</h1>
+      <p>Qualité, sécurité et savoir-faire dans les domaines du BTP et de l’espace vert.</p>
+    </section>
+
+    <section class="services">
+      <h1 class="services-title">Domaines :</h1>
+      <div class="dropdowns">
+        <div class="dropdown-container">
+          <button class="dropdown-toggle">Espace Vert</button>
+          <ul class="dropdown-menu">
+            <li>Débroussaillage</li>
+            <li>Défrichage</li>
+            <li>Désherbage</li>
+            <li>Abattage</li>
+            <li>Élagage</li>
+            <li>Dessouchage</li>
+            <li>Jardinage</li>
+          </ul>
+        </div>
+
+        <div class="dropdown-container">
+          <button class="dropdown-toggle">BTP</button>
+          <ul class="dropdown-menu">
+            <li>Architecture</li>
+            <li>Maçonnerie</li>
+            <li>Menuiserie</li>
+            <li>Carrelage</li>
+            <li>Charpente</li>
+            <li>Électricité</li>
+            <li>Plomberie</li>
+            <li>Peinture</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro">
+      <h2>Entretien et nettoyage des espaces verts. Des services de qualité pour un extérieur impeccable.</h2>
+      <p class="contact">Contact : 077-586-686 / 077-373-021</p>
+    </section>
+  </main>
+
+  <!-- Modal de connexion / inscription -->
+  <div id="auth-modal" class="hidden">
+    <div class="modal-content">
+      <!-- Bouton de fermeture -->
+      <button id="close-auth" class="close-modal-btn" aria-label="Fermer le formulaire">
+        ×
+      </button>
+      <form id="auth-form" enctype="multipart/form-data"  > 
+        <h2>Connexion / Inscription</h2>
+        <label for="nomUtilisateur">Nom d'utilisateur :</label>
+    <input type="text" id="nomUtilisateur" name="nomUtilisateur" required />
+
     
-      // Your web app's Firebase configuration
-      const firebaseConfig = {
-        apiKey: "AIzaSyC90yIfNcw5plugh56FCFugaE5B9NosmaE",
-        authDomain: "landing-esn.firebaseapp.com",
-        projectId: "landing-esn",
-        storageBucket: "landing-esn.firebasestorage.app",
-        messagingSenderId: "143919197906",
-        appId: "1:143919197906:web:b035cba202287a96f8c70b"
-      };
-    
-      // Initialize Firebase
-      const app = initializeApp(firebaseConfig);
-    </script>
-    <footer class="site-footer">
-      <p>&copy; 2025 ESN. Tous droits réservés.</p>
-      <p><a href="confidentialite.html">Politique de confidentialité</a></p>
-      <p><a href="data-deletion.html">Politique de suppression des données</a></p>
-    </footer>
-    
-  </body>
-  </html>
+    <label for="motDePasse">Mot de passe :</label>
+    <input type="password" id="motDePasse" name="motDePasse" required />
+
+    <label for="photoProfil">Photo de profil :</label>
+    <input type="file" id="photoProfil" name="photoProfil" accept="image/*" required />
+
+    <input type="submit" value="Valider">
+      </form>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script src="index.js"></script>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 ESN. Tous droits réservés.</p>
+    <p><a href="confidentialite.html">Politique de confidentialité</a></p>
+    <p><a href="data-deletion.html">Politique de suppression des données</a></p>
+  </footer>
+</body>
+</html>
