@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const formData = new FormData(form);
 
     try {
-      const res = await fetch('http://localhost:3500/utilisateurs', {
+      const res = await fetch('https://gheobechoco.github.io/LandingESN2/', {
         method: 'POST',
         body: formData
       });
@@ -100,4 +100,23 @@ document.addEventListener('DOMContentLoaded', () => {
       alert("❌ Erreur lors de l'inscription : " + err.message);
     }
   });
+});
+
+document.getElementById('logout-btn').addEventListener('click', () => {
+  // Supprimer les informations de l'utilisateur (par exemple, le token) du stockage local
+  localStorage.removeItem('userToken');
+
+  // Mettre à jour l'interface utilisateur
+  document.getElementById('user-info').classList.add('hidden');
+  document.getElementById('auth-buttons').classList.remove('hidden');
+
+  // Rediriger vers la page d'accueil ou une page de connexion
+  window.location.href = '/'; // Remplacez '/' par l'URL de votre page d'accueil ou de connexion
+});
+
+// Gestion de la récupération de compte
+document.getElementById('recover-link').addEventListener('click', (e) => {
+  e.preventDefault();
+  // Ajoutez ici le code pour afficher un formulaire de récupération de compte
+  alert('Fonctionnalité de récupération de compte en cours de développement.');
 });
